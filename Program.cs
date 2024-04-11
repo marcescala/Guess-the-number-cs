@@ -1,22 +1,19 @@
 ﻿using System;
-using game;
 
-namespace GuessNumber
+namespace GuessTheNumber
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("¡Bienvenida! Por favor, ingresa tu nombre:");
+            string playerName = Console.ReadLine();
 
-            Console.WriteLine("Bienvenida,vamos a jugar! Adivina un número entre 1 y 100");
+            Console.WriteLine(playerName + " Vamos a jugar! Adivina un número entre 1 y 100");
             Console.WriteLine();
             
-            MyFunctions myFunctions = new MyFunctions(); // Crear una instancia de MyFunctions
-            myFunctions.GenerateAndSaveNum(); // Llamar al método GenerateAndSaveNum
-
-
+            Game game = new Game(playerName); // Crear una instancia de Game con el nombre del jugador
+            game.Start(); 
         }
-
     }
-
 }

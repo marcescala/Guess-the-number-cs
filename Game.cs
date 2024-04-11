@@ -1,20 +1,26 @@
 using System;
 using System.IO;
 
-namespace game
+
+namespace GuessTheNumber
 {
-    public class MyFunctions
+    public class Game
     {
-        public void GenerateAndSaveNum()
+        public int numberRandom { get; set; } // Almacena numero ramdom
+        public Player Player { get; set; } // Propiedad que almacena una instancia de Player
+        
+        // Constructor que inicializa el número aleatorio y crea un nuevo objeto Player
+        public Game(string playerName)
         {
             Random random = new Random();
-            int numberRandom = random.Next(1, 101); // Genera un número aleatorio entre 1 y 100
-            // Console.WriteLine(numberRandom);
+            numberRandom = random.Next(1, 101); // Inicializa el número aleatorio
 
-            Console.WriteLine("Por favor, ingresa un número entre 1 y 100:");
-
-            // Leer el número ingresado por el usuario
-            int input = Int32.Parse(Console.ReadLine());
+            Player = new Player(playerName); // Crea una nueva instancia de Player con el nombre proporcionado
+        }
+        public void Start() // Comienza el juego
+        {
+            
+             int input = Player.MakeGuess();
 
 
             while (input != numberRandom)
@@ -22,14 +28,13 @@ namespace game
                 if (input < numberRandom)
                 {
                     Console.WriteLine("Debes ingresar un número mayor");
-                    input = int.Parse(Console.ReadLine());
-
                 }
                 else if (input > numberRandom)
                 {
                     Console.WriteLine("Debes ingresar un número menor");
-                    input = int.Parse(Console.ReadLine());
                 }
+                input = Player.MakeGuess();
+               
 
                     }
                 Console.WriteLine("Felicidades, has adivinado el número");
