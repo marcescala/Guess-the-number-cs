@@ -1,59 +1,82 @@
-using System;
-using System.IO;
+using System.Reflection.Metadata;
 
+namespace GuessTheNumber;
 
-namespace GuessTheNumber
+public class Game
 {
-    public class Game
+    private int NumberRandom { get; set; } // Almacena numero ramdom
+    private Player HumanPlayer { get; set; }
+    private Player AiPlayer { get; set; }
+
+
+    // Constructor que inicializa el número aleatorio y crea un nuevo objeto Player
+    public Game(string playerName)
     {
-        private int numberRandom { get; set; } // Almacena numero ramdom
-        private Player HumanPlayer { get; set; }
-        private Player AiPlayer { get; set; }
+        Random random = new();
+        bool isHumanFirst = random.Next(0, 2) == 0;
 
+        RandomNumberGenerator();
 
-        // Constructor que inicializa el número aleatorio y crea un nuevo objeto Player
-        public Game(string playerName)
+        if (isHumanFirst)
         {
-            RandomNumberGenerator(); // llama el metodo que genera el numero aleatorio
-
-            Player HumanPlayer = new HumanPlayer(playerName);
-
-            Player AiPlayer = new AiPlayer(playerName);
+            HumanPlayer = new HumanPlayer(playerName);
+            AiPlayer = new AiPlayer("AI Player");
         }
-        private void RandomNumberGenerator() // Metodo que genera un número aleatorio entre 1 y 100
+        else
         {
-            Random random = new Random();
-            numberRandom = random.Next(1, 101); // utilizando la clase Random
+            AiPlayer = new AiPlayer("AI Player");
+            HumanPlayer = new HumanPlayer(playerName);
         }
-        public void Start() // Comienza el juego
-        {
-            Player currentPlayer = HumanPlayer; // Inicia el juego con humanPlayer
+    }
+    private void RandomNumberGenerator() // Metodo que genera un número aleatorio entre 1 y 100
+    {
+        Random random = new();
+        NumberRandom = random.Next(1, 101); // utilizando la clase Random
+    }
+    private void CheckGuess(int guess)
+    {
+        if (guess < NumberRandom)
+    {
+        Console.WriteLine("Muy bajo");
+        Console.WriteLine();
+    }
+    else if (guess > NumberRandom)
+    {
+        Console.WriteLine("Muy alto");
+        Console.WriteLine();
+    }
+    }
+    public void Start() // Comienza el juego
+    {
+        Player currentPlayer = HumanPlayer; // Inicia el juego con humanPlayer
 
-            while (true)
+        while (true)
+        {
+            // Solicita al jugador actual que haga su intento
+            int input = currentPlayer.MakeGuess();
+
+            CheckGuess(input);
+
+
+            if (input == NumberRandom)
             {
-                // Solicita al jugador actual que haga su intento
-                int input = currentPlayer.MakeGuess();
-
-
-
-                if (input < numberRandom)
+                
+                Console.WriteLine();
+                Console.WriteLine($"Felicidades, has adivinado el número");
+                Console.WriteLine();
+                Console.WriteLine($"Adivinaste en {currentPlayer.Attempts.Count} intentos.");
+                Console.WriteLine("Intentos realizados:");
+                foreach (int attempt in currentPlayer.Attempts)
                 {
-                    Console.WriteLine("Debes ingresar un número mayor");
+                    Console.Write(attempt + " - ");
                 }
-                else if (input > numberRandom)
-                {
-                    Console.WriteLine("Debes ingresar un número menor");
-                }
-                else
-                {
-                    Console.WriteLine($"Felicidades, has adivinado el número");
-                    break; // Sale del bucle si se adivina el número
-                }
-                currentPlayer = (currentPlayer == HumanPlayer) ? AiPlayer : HumanPlayer;
-
-
+                Console.WriteLine();
+                break; // Sale del bucle si se adivina el número
             }
-            Console.WriteLine($"Felicidades, has adivinado el número");
+            currentPlayer = (currentPlayer == HumanPlayer) ? AiPlayer : HumanPlayer;
+
+
         }
+
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace GuessTheNumber;
 
 abstract class Player
@@ -8,19 +5,15 @@ abstract class Player
 {
     public string Name { get; set; }
     public int LastAttempt { get; set; }
-    public List<int> Attempts { get; }
+    public List<int> Attempts { get; private set;}
 
-    protected Player(string playerName)
+    protected Player(string name)
     {
-        Name = playerName;
+        Name = name;
         LastAttempt = 0; // Inicializa el último intento en cero al crear una nueva instancia
-        Attempts = new List<int>(); // Inicializa la lista de intentos
+        Attempts = []; // Inicializa la lista de intentos
     }
 
-    public void GetLastGuess()
-    {
-        Console.WriteLine($"Tu último intento fue: {LastAttempt}");
-    }
 
     public abstract int MakeGuess();
 

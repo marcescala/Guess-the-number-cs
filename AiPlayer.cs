@@ -1,25 +1,28 @@
 namespace GuessTheNumber
 {
-    abstract class AiPlayer : Player
+    class AiPlayer : Player
     {
-        private Random random = new();
-        public new string Name { get; set; }
+        private int GuessRandom { get; set; }
+
 
         public AiPlayer(string playerName) : base(playerName)
         {
-            Name = playerName;
+        
+            Random random = new ();
+            GuessRandom = random.Next(1, 101);
 
         }
-    }
 
-    public override int MakeGuess()
-    {
-        int guess = random.Next(1, 101); // Genera un número aleatorio entre 1 y 100 (ambos inclusive)
-        Console.WriteLine($"AI Player's guess: {guess}");
 
-        LastAttempt = guess;
-        Attempts.Add(guess); // Agrega el nuevo intento al historial
-        return guess;
+        public override int MakeGuess()
+        {
+            Random random = new ();
+            int GuessRandom = random.Next(1, 101);
+            Console.WriteLine($"Es el turno de la computadora, su número es: {GuessRandom}");
+            Attempts.Add(GuessRandom);
+            return GuessRandom;
+            
+        }
     }
 
 }
