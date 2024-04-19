@@ -33,7 +33,7 @@ public class Game
         Random random = new();
         NumberRandom = random.Next(1, 101); // utilizando la clase Random
     }
-    private void CheckGuess(int guess)
+    private bool CheckGuess(int guess)
     {
         if (guess < NumberRandom)
     {
@@ -45,6 +45,7 @@ public class Game
         Console.WriteLine("Muy alto");
         Console.WriteLine();
     }
+    return true;
     }
     public void Start() // Comienza el juego
     {
@@ -60,10 +61,11 @@ public class Game
 
             if (input == NumberRandom)
             {
-                
+                Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine();
                 Console.WriteLine($"Felicidades, has adivinado el número");
                 Console.WriteLine();
+                Console.ResetColor();
                 Console.WriteLine($"Adivinaste en {currentPlayer.Attempts.Count} intentos.");
                 Console.WriteLine("Intentos realizados:");
                 foreach (int attempt in currentPlayer.Attempts)

@@ -10,8 +10,9 @@ namespace GuessTheNumber
         }
         public override int MakeGuess()
         {
-            Console.WriteLine($"Es tu turno {Name}, ingresa un número:");
-            Console.WriteLine();
+            
+            Console.WriteLine($"- - - - Es tu turno {Name} - - - -");
+            
             if (int.TryParse(Console.ReadLine(), out int guess))
             {
                 if (guess >= 1 && guess <= 100)
@@ -21,6 +22,7 @@ namespace GuessTheNumber
                 }
                 else
                 {
+                    
                     Console.WriteLine("Por favor ingresa un número válido entre 1 y 100.");
                     Console.WriteLine();
                     return MakeGuess(); // Llamada recursiva si no se ingresa un número válido

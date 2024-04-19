@@ -7,8 +7,8 @@ namespace GuessTheNumber
 
         public AiPlayer(string playerName) : base(playerName)
         {
-        
-            Random random = new ();
+
+            Random random = new();
             GuessRandom = random.Next(1, 101);
 
         }
@@ -16,12 +16,16 @@ namespace GuessTheNumber
 
         public override int MakeGuess()
         {
-            Random random = new ();
+            Random random = new();
             int GuessRandom = random.Next(1, 101);
-            Console.WriteLine($"Es el turno de la computadora, su número es: {GuessRandom}");
-            Attempts.Add(GuessRandom);
-            return GuessRandom;
+
             
+            Console.WriteLine("- - - - Es el turno de la computadora - - - - ");
+            Console.WriteLine($"{GuessRandom}");
+            Attempts.Add(GuessRandom);
+
+            return GuessRandom;
+
         }
     }
 

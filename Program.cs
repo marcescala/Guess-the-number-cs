@@ -9,7 +9,7 @@ namespace GuessTheNumber
         {
             
             Console.WriteLine();
-            Console.WriteLine(" Vamos a jugar! Adivina un número entre 1 y 100");
+            Console.WriteLine(" * ¡Vamos a jugar! Adivina un número entre 1 y 100 *");
             Console.WriteLine();
             Console.WriteLine("Por favor, ingresa tu nombre:");
             string? playerName = Console.ReadLine();
