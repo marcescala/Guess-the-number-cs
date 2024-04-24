@@ -4,7 +4,7 @@ namespace GuessTheNumber;
 
 public class Game
 {
-    private int NumberRandom { get; set; } // Almacena numero ramdom
+    public int NumberRandom { get; set; } // Almacena numero ramdom
     private Player HumanPlayer { get; set; }
     private Player AiPlayer { get; set; }
 
@@ -28,12 +28,12 @@ public class Game
             HumanPlayer = new HumanPlayer(playerName);
         }
     }
-    private void RandomNumberGenerator() // Metodo que genera un número aleatorio entre 1 y 100
+    public void RandomNumberGenerator() // Metodo que genera un número aleatorio entre 1 y 100
     {
         Random random = new();
         NumberRandom = random.Next(1, 101); // utilizando la clase Random
     }
-    private bool CheckGuess(int guess)
+    public bool CheckGuess(int guess)
     {
         if (guess < NumberRandom)
     {
