@@ -7,8 +7,7 @@ namespace Guess_the_number.Tests
     [TestClass]
     public class GameTest
     {
-         [TestMethod]
-    public void TestGuessIsLowerThanRandom()
+
     
         [TestMethod]
         public void TestCheckGuess_LowerThanNumber()
