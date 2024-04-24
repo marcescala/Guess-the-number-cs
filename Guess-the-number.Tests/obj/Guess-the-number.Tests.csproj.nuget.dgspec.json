@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/Guess-the-number.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/Guess-the-number.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/Guess-the-number.Tests.csproj",
+        "projectName": "Guess-the-number.Tests",
+        "projectPath": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/Guess-the-number.Tests.csproj",
+        "packagesPath": "/Users/marcelaavellaneda/.nuget/packages/",
+        "outputPath": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/marcelaavellaneda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/Guess-the-number.csproj": {
+                "projectPath": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/Guess-the-number.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/Guess-the-number.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/Guess-the-number.csproj",
+        "projectName": "Guess-the-number",
+        "projectPath": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/Guess-the-number.csproj",
+        "packagesPath": "/Users/marcelaavellaneda/.nuget/packages/",
+        "outputPath": "/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/marcelaavellaneda/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
