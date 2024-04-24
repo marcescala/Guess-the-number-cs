@@ -224,3 +224,4 @@
 /Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/obj/Debug/net8.0/Guess-the-number.Tests.pdb
 /Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/obj/Debug/net8.0/Guess-the-number.Tests.genruntimeconfig.cache
 /Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/obj/Debug/net8.0/ref/Guess-the-number.Tests.dll
+/Users/marcelaavellaneda/documentos/Proyectos/Guess-the-number-cs/Guess-the-number.Tests/obj/Debug/net8.0/Guess-the-number.Tests.sourcelink.json
