@@ -7,18 +7,32 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guess-the-number", "Guess-t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guess-the-number.Tests", "Guess-the-number.Tests\Guess-the-number.Tests.csproj", "{B95B4B1D-660D-46CB-8E3D-4779DF780A96}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Guess-the-numberCs", "Guess-the-numberCs", "{3CC191DD-9FC5-4A9E-864D-40624BFDD3A4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "Guess-the-numberCs\ConsoleApp1\ConsoleApp1.csproj", "{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B95B4B1D-660D-46CB-8E3D-4779DF780A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B95B4B1D-660D-46CB-8E3D-4779DF780A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B95B4B1D-660D-46CB-8E3D-4779DF780A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B95B4B1D-660D-46CB-8E3D-4779DF780A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC80ACBB-AF21-443F-933E-2DFBDD2EC65B} = {3CC191DD-9FC5-4A9E-864D-40624BFDD3A4}
 	EndGlobalSection
 EndGlobal
